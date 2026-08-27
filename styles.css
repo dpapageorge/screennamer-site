@@ -94,11 +94,14 @@ h1 {
 .meta { font-size: 13px; color: var(--ink-faint); }
 
 figure.shot { margin: 52px 0 0; }
-figure.shot img {
+figure.shot img,
+figure.shot video {
   width: 100%;
+  height: auto;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   display: block;
+  background: var(--bg-soft);
 }
 
 /* ---------- sections ---------- */

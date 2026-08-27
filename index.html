@@ -53,8 +53,17 @@
     </div>
 
     <figure class="shot">
-      <!-- Overwrite this file to update the hero image; the page needs no change. -->
-      <img src="assets/mockup-turbo-sugar.png" alt="The ScreenNamer rename panel floating over a web page. A preview of the captured image sits on the left; on the right, the name field reads &quot;turb&quot; with &quot;o-sugar.png&quot; completed in grey, above five previously used names.">
+      <!--
+        The whole pitch is speed, and speed is not a thing a still image can show.
+        Muted and inline so it plays on mobile; the poster covers the moment before
+        playback, and anyone who has asked their system to reduce motion.
+      -->
+      <video autoplay muted loop playsinline preload="metadata"
+             poster="assets/hero-poster.jpg"
+             aria-label="A screenshot is captured over a web page. The ScreenNamer panel appears with a preview and a list of recent names. A few letters are typed and the rest of a name completes in grey; the arrow keys move down the ranked suggestions, one is chosen into the field and edited, and Return saves it. The panel disappears.">
+        <source src="assets/hero.mp4" type="video/mp4">
+        <img src="assets/hero-poster.jpg" alt="The ScreenNamer rename panel floating over a web page, showing a preview of the capture beside a name field and a list of previously used names.">
+      </video>
     </figure>
   </div>
 
@@ -194,6 +203,21 @@
     </nav>
   </div>
 </footer>
+
+<script>
+  // Respect prefers-reduced-motion: hold the hero on its poster frame instead of looping.
+  (function () {
+    var video = document.querySelector('figure.shot video');
+    if (!video) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function apply() {
+      if (reduce.matches) { video.pause(); video.removeAttribute('loop'); }
+      else { video.play().catch(function () {}); }
+    }
+    apply();
+    reduce.addEventListener('change', apply);
+  })();
+</script>
 
 </body>
 </html>
