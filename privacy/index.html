@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — ScreenNamer</title>
+<meta name="description" content="ScreenNamer collects nothing. It has no network access, no accounts, and no analytics. Everything it stores stays on your Mac.">
+<link rel="icon" href="../assets/icon.png">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <img src="../assets/mark.svg" alt="">
+    <a class="name" href="../" style="color:inherit">ScreenNamer</a>
+    <nav>
+      <a href="../">Home</a>
+      <a href="mailto:daniel@turbosugar.com">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap legal">
+
+  <h1>Privacy Policy</h1>
+  <p class="stamp">Last updated 26 August 2026 · Applies to ScreenNamer for macOS</p>
+
+  <div class="summary">
+    <p><strong>The short version:</strong> ScreenNamer collects nothing about you. It has no network access, so it cannot send anything anywhere — not analytics, not crash reports, not your filenames. Everything it remembers stays on your Mac and is yours to erase.</p>
+  </div>
+
+  <h2>Who this is from</h2>
+  <p>ScreenNamer is made by Turbo Sugar LLC. If anything here is unclear, write to <a href="mailto:daniel@turbosugar.com">daniel@turbosugar.com</a>.</p>
+
+  <h2>What ScreenNamer does not do</h2>
+  <p>ScreenNamer runs in Apple's App Sandbox and requests <strong>no network entitlement of any kind</strong>. macOS refuses network connections from the app at the operating-system level. As a direct consequence:</p>
+  <ul>
+    <li>There is no analytics, telemetry, or usage tracking.</li>
+    <li>There is no crash reporting.</li>
+    <li>There are no accounts, logins, or profiles.</li>
+    <li>There are no advertisements and no advertising identifiers.</li>
+    <li>There are no third-party SDKs or services embedded in the app.</li>
+    <li>Nothing about your screenshots, filenames, or usage is transmitted anywhere.</li>
+  </ul>
+  <p>This is not a promise about our intentions. It is a property of how the app is built, and you can verify it: the app's entitlements are visible in the bundle, and macOS enforces them whether we like it or not.</p>
+
+  <h2>What ScreenNamer stores on your Mac</h2>
+  <p>Three things, all inside the app's own sandbox container on your machine:</p>
+  <ul>
+    <li><strong>A reference to the folder you chose.</strong> When you pick your screenshot folder, macOS gives the app a security-scoped bookmark — a token that grants access to that one folder. The bookmark is saved so you don't have to choose again after restarting.</li>
+    <li><strong>Names you have saved.</strong> Up to 200 of the names you type, with when you last used one and how often, so the app can suggest them later. This is only ever populated by names you type and confirm — nothing is recorded until you actually rename a screenshot.</li>
+    <li><strong>Two preferences.</strong> Whether suggestions are switched on, and whether you have completed the first-run walkthrough.</li>
+  </ul>
+  <p>None of this is transmitted. None of it is shared. It sits in your user library like any other app's settings.</p>
+
+  <h2>Your screenshots</h2>
+  <p>ScreenNamer reads image files in the folder you selected in order to do its job, and only in these ways:</p>
+  <ul>
+    <li>It reads a file's size and modification date to tell whether the capture has finished writing.</li>
+    <li>It generates a small preview to show you in the rename panel, which exists only in memory while the panel is open.</li>
+    <li>It reads the image's pixel dimensions to display them.</li>
+    <li>It renames the file, or moves it to the Trash if you press Escape.</li>
+  </ul>
+  <p>The contents of your screenshots are never analysed, catalogued, uploaded, or retained. There is no OCR, no image recognition, and no AI. The app has no copy of your screenshots and no index of them.</p>
+
+  <h2>Folder access</h2>
+  <p>ScreenNamer can only see the folder you explicitly choose through the standard macOS open panel. It does not request full disk access, and it cannot read your Documents, your Photos, or anywhere else on your Mac. If you revoke access or move the folder, the app stops watching and asks you to choose again.</p>
+
+  <h2>Launch at login</h2>
+  <p>If you turn on Launch at Login, ScreenNamer registers itself with macOS using Apple's standard mechanism. That registration lives with the operating system, not with us, and switching the setting off removes it.</p>
+
+  <h2>Your choices</h2>
+  <ul>
+    <li><strong>Erase the saved names.</strong> Settings → History → Clear. This removes them immediately and permanently.</li>
+    <li><strong>Turn suggestions off.</strong> Settings → App → Suggest previous names. Nothing further is recorded.</li>
+    <li><strong>Revoke folder access.</strong> Choose a different folder, or quit the app.</li>
+    <li><strong>Remove everything.</strong> Deleting ScreenNamer removes the app; deleting its container in <code>~/Library/Containers/</code> removes every setting and saved name along with it. Screenshots you have already renamed are your files and are left alone.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>ScreenNamer is a general-purpose utility and is not directed at children. It collects no personal information from anyone, of any age.</p>
+
+  <h2>Legal bases and your rights</h2>
+  <p>Regulations such as the GDPR and CCPA govern the collection and processing of personal data. ScreenNamer collects and processes none, and transmits none, so there is no data for us to disclose, correct, export, sell, or delete on request — and nothing is ever sold or shared, because nothing is ever received. Data held on your own Mac remains under your control at all times.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If ScreenNamer ever gains a feature that changes any of the above — a network connection of any sort, for instance — this page will be updated before that version ships, and the change will be described in the app's release notes rather than quietly amended here.</p>
+
+  <h2>Contact</h2>
+  <p>Questions, corrections, or concerns: <a href="mailto:daniel@turbosugar.com">daniel@turbosugar.com</a>.</p>
+
+</main>
+
+<footer>
+  <div class="wrap footrow">
+    <span>© 2026 Turbo Sugar LLC · Made with ♥ in Colorado</span>
+    <nav>
+      <a href="../">Home</a>
+      <a href="mailto:daniel@turbosugar.com">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>

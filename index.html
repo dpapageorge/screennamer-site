@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ScreenNamer — Rename screenshots instantly</title>
+<meta name="description" content="A macOS menu-bar app that offers to name each screenshot the moment it lands. Type a name, press Return, done. Nothing leaves your Mac.">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:title" content="ScreenNamer — Rename screenshots instantly">
+<meta property="og:description" content="Name screenshots while you still remember why you took them. A small macOS menu-bar app with no network access.">
+<meta property="og:image" content="https://screennamer.com/assets/mockup-turbo-sugar.png">
+<meta property="og:url" content="https://screennamer.com/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <img src="assets/mark.svg" alt="">
+    <span class="name">ScreenNamer</span>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap hero">
+    <img class="icon" src="assets/icon.png" alt="ScreenNamer app icon">
+    <h1>Rename screenshots instantly.</h1>
+    <p class="lede">
+      ScreenNamer watches your screenshot folder and offers a name the moment a capture
+      lands. Type it, press Return, done. No Finder, no editor, no Dock icon.
+    </p>
+
+    <div class="cta">
+      <!--
+        PRIVATE BETA. When the notarised build is hosted, swap this block for:
+          <a class="button" href="/downloads/ScreenNamer-1.0.zip">Download for macOS</a>
+          <span class="meta">Version 1.0 · macOS 14 or later · Apple silicon and Intel</span>
+      -->
+      <a class="button" href="mailto:daniel@turbosugar.com?subject=ScreenNamer%20early%20access">Request early access</a>
+      <span class="meta">
+        Private beta · macOS 14 or later · Apple silicon and Intel<br>
+        Write to <a href="mailto:daniel@turbosugar.com">daniel@turbosugar.com</a> and I'll send you a build.
+      </span>
+    </div>
+
+    <figure class="shot">
+      <!-- Overwrite this file to update the hero image; the page needs no change. -->
+      <img src="assets/mockup-turbo-sugar.png" alt="The ScreenNamer rename panel floating over a web page. A preview of the captured image sits on the left; on the right, the name field reads &quot;turb&quot; with &quot;o-sugar.png&quot; completed in grey, above five previously used names.">
+    </figure>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <p class="pull">
+        Because <code>Screenshot 2026-08-26 at 12.47.19 AM.png</code><br>
+        doesn't help anyone.
+      </p>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="wrap">
+      <h2>Three keys, then it's gone</h2>
+      <p class="sub">
+        macOS keeps taking the screenshots. ScreenNamer adds one step to the capture you
+        already do — it never replaces the built-in shortcuts.
+      </p>
+      <div class="steps">
+        <div class="step">
+          <h3>Capture</h3>
+          <p>Use ⌘⇧4, ⌘⇧3, or any shortcut you already have. Nothing changes.</p>
+        </div>
+        <div class="step">
+          <h3>Name</h3>
+          <p>A small panel appears with the field already focused and a preview of the shot.</p>
+        </div>
+        <div class="step">
+          <h3>Return</h3>
+          <p>The file is renamed in place and the panel disappears. Escape moves it to the Trash instead.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>What it does</h2>
+      <p class="sub">One job, done carefully.</p>
+      <div class="grid">
+        <div class="card">
+          <h3>Suggests names you've used</h3>
+          <p>Start typing and earlier names appear, ranked by how recently you used them and how closely they match. Choosing one fills the field — it is never saved without you pressing Return.</p>
+        </div>
+        <div class="card">
+          <h3>Keeps up with rapid captures</h3>
+          <p>Take five screenshots in a row and they queue behind one panel instead of stacking windows. Name them one at a time, or skip through.</p>
+        </div>
+        <div class="card">
+          <h3>Preserves your extension</h3>
+          <p>Type a name, not a filename. PNG stays PNG. Duplicate names get a number instead of an error.</p>
+        </div>
+        <div class="card">
+          <h3>Discards the ones you don't want</h3>
+          <p>Escape moves a screenshot to the Trash — recoverable from Finder, never silently deleted.</p>
+        </div>
+        <div class="card">
+          <h3>Lives in the menu bar</h3>
+          <p>No Dock icon, no window taking up space. It is invisible until a screenshot lands.</p>
+        </div>
+        <div class="card">
+          <h3>Watches one folder, and only that one</h3>
+          <p>You pick it. macOS remembers the grant. ScreenNamer never asks for access to the rest of your disk.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy">
+    <div class="wrap">
+      <div class="banner">
+        <h2>Nothing leaves your Mac. It can't.</h2>
+        <p>
+          ScreenNamer is sandboxed by macOS and requests <strong>no network access at all</strong> —
+          not for analytics, not for updates, not for anything. The operating system would refuse
+          the connection even if the app tried to make one.
+        </p>
+        <p>
+          There are no accounts, no trackers, and no third-party services. The names you type and
+          the folder you choose stay on your machine.
+        </p>
+        <p style="margin-top:16px"><a href="privacy/">Read the full privacy policy</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <h2>Questions</h2>
+
+      <details>
+        <summary>Does it change my screenshot shortcuts?</summary>
+        <p>No. ⌘⇧3, ⌘⇧4 and ⌘⇧5 keep working exactly as they do now. ScreenNamer watches the folder macOS saves to and reacts after the fact — it never intercepts the capture itself.</p>
+      </details>
+
+      <details>
+        <summary>The panel takes a few seconds to appear. Why?</summary>
+        <p>That is macOS, not ScreenNamer. While the floating thumbnail is showing in the corner of your screen, macOS waits about five seconds before writing the file to disk — so nothing can see it until then. Press ⌘⇧5, click Options, and turn off <em>Show Floating Thumbnail</em>, and screenshots save instantly. ScreenNamer mentions this the first time you open it.</p>
+      </details>
+
+      <details>
+        <summary>Which folder does it watch?</summary>
+        <p>Whichever one you pick during setup — usually your Desktop, or wherever you pointed macOS with <code>defaults write com.apple.screencapture location</code>. It watches that folder and nothing else.</p>
+      </details>
+
+      <details>
+        <summary>What happens if I press Escape by accident?</summary>
+        <p>The screenshot moves to the Trash, where you can put it back with ⌘Z in Finder or by dragging it out. It is never deleted outright, precisely because a single keystroke shouldn't be able to lose your work.</p>
+      </details>
+
+      <details>
+        <summary>Can I stop it temporarily?</summary>
+        <p>Quit it from the menu bar. Renaming is what the app is, so there is no half-on state to get confused by — and Launch at Login decides whether it comes back tomorrow.</p>
+      </details>
+
+      <details>
+        <summary>Does it use AI to name my screenshots?</summary>
+        <p>No. Suggestions come from names you have typed before, on your own machine. Nothing is analysed, uploaded, or generated. You always write the name yourself.</p>
+      </details>
+
+      <details>
+        <summary>Which Macs does it run on?</summary>
+        <p>macOS 14 Sonoma or later, on Apple silicon and Intel.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footrow">
+    <span>© 2026 Turbo Sugar LLC · Made with ♥ in Colorado</span>
+    <nav>
+      <a href="privacy/">Privacy</a>
+      <a href="mailto:daniel@turbosugar.com">Support</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
