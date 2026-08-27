@@ -134,7 +134,12 @@ h2 {
   color: var(--ink-faint);
 }
 
-.grid { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+/* Eight cards, two rows of four. Below the breakpoint auto-fit takes over and lets
+   them reflow to three, two, then one — 8 divides evenly by all of those. */
+.grid { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+@media (min-width: 940px) {
+  .grid { grid-template-columns: repeat(4, 1fr); }
+}
 
 .card {
   background: var(--bg-soft);

@@ -115,11 +115,11 @@
       <div class="grid">
         <div class="card">
           <h3>Suggests names you've used</h3>
-          <p>Start typing and earlier names appear, ranked by how recently you used them and how closely they match. Choosing one fills the field — it is never saved without you pressing Return.</p>
+          <p>Type a few letters and earlier names appear, best match first. Choosing one fills the field — nothing saves until Return.</p>
         </div>
         <div class="card">
           <h3>Keeps up with rapid captures</h3>
-          <p>Take five screenshots in a row and they queue behind one panel instead of stacking windows. Name them one at a time, or skip through.</p>
+          <p>Five captures in a row queue behind one panel instead of stacking windows. Name them one at a time.</p>
         </div>
         <div class="card">
           <h3>Preserves your extension</h3>
@@ -130,12 +130,20 @@
           <p>Escape moves a screenshot to the Trash — recoverable from Finder, never silently deleted.</p>
         </div>
         <div class="card">
+          <h3>Copies to the clipboard</h3>
+          <p>⇧⌘C puts the full-resolution image on your clipboard and trashes the file — for captures you only took to paste somewhere.</p>
+        </div>
+        <div class="card">
           <h3>Lives in the menu bar</h3>
-          <p>No Dock icon, no window taking up space. It is invisible until a screenshot lands.</p>
+          <p>No Dock icon, no window taking up space. Invisible until a screenshot lands.</p>
+        </div>
+        <div class="card">
+          <h3>Never needs the mouse</h3>
+          <p>Arrows or Tab move through the suggestions. Return puts one in the field, a second Return saves it.</p>
         </div>
         <div class="card">
           <h3>Watches one folder, and only that one</h3>
-          <p>You pick it. macOS remembers the grant. ScreenNamer never asks for access to the rest of your disk.</p>
+          <p>You pick it, macOS remembers the grant, and the app never asks for the rest of your disk.</p>
         </div>
       </div>
     </div>
@@ -153,6 +161,12 @@
         <p>
           There are no accounts, no trackers, and no third-party services. The names you type and
           the folder you choose stay on your machine.
+        </p>
+        <p>
+          One clarification, because the app offers it: <strong>Save to Clipboard</strong> hands the
+          image to the macOS clipboard, which every app you run can read — and, with Handoff on, your
+          other Apple devices too. That is the system clipboard working as designed, and it happens
+          only when you choose it.
         </p>
         <p style="margin-top:16px"><a href="privacy/">Read the full privacy policy</a></p>
       </div>
@@ -181,6 +195,11 @@
       <details>
         <summary>What happens if I press Escape by accident?</summary>
         <p>The screenshot moves to the Trash, where you can put it back with ⌘Z in Finder or by dragging it out. It is never deleted outright, precisely because a single keystroke shouldn't be able to lose your work.</p>
+      </details>
+
+      <details>
+        <summary>Can I copy a screenshot without keeping the file?</summary>
+        <p>Yes — <strong>Save to Clipboard</strong> in the panel, or ⇧⌘C. The full-resolution image goes to your clipboard ready to paste, and the file moves to the Trash instead of staying in your screenshot folder. It is for the captures you only took in order to paste them somewhere. The copy is made first and the file is only moved once it has landed, so a screenshot can never disappear without reaching your clipboard.</p>
       </details>
 
       <details>
