@@ -61,7 +61,10 @@ header {
 
 /* ---------- hero ---------- */
 
-.hero { padding: 78px 0 44px; text-align: center; }
+/* Vertical padding as longhand on purpose: `padding: 78px 0 44px` is a shorthand,
+   so it would reset .wrap's horizontal padding to 0 and let the hero video run
+   edge to edge. Same reason for .legal below. */
+.hero { padding-top: 78px; padding-bottom: 44px; text-align: center; }
 .hero img.icon { width: 104px; height: 104px; margin-bottom: 22px; }
 
 h1 {
@@ -190,7 +193,7 @@ details p { color: var(--ink-soft); margin: 10px 0 0; }
 
 /* ---------- legal pages ---------- */
 
-.legal { padding: 56px 0 24px; max-width: 720px; }
+.legal { padding-top: 56px; padding-bottom: 24px; max-width: 720px; }
 .legal h1 { font-size: clamp(28px, 4vw, 38px); margin-bottom: 8px; }
 .legal .stamp { color: var(--ink-faint); font-size: 14px; margin: 0 0 34px; }
 .legal h2 { font-size: 20px; margin: 36px 0 8px; }
