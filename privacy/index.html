@@ -69,7 +69,9 @@
     <li>It generates a small preview to show you in the rename panel, which exists only in memory while the panel is open.</li>
     <li>It reads the image's pixel dimensions to display them.</li>
     <li>It renames the file, or moves it to the Trash if you press Escape.</li>
+    <li>If you choose <strong>Save to Clipboard</strong>, it reads the full image and places it on the system clipboard, then moves the file to the Trash. The copy happens first: if it fails, the file is left where it is.</li>
   </ul>
+  <p>The clipboard is the one place a screenshot leaves ScreenNamer's control, and only when you ask for it. macOS makes the clipboard readable by every app you run, and if you have Handoff switched on, Universal Clipboard may carry it to your other Apple devices. That is the system clipboard working as designed rather than ScreenNamer sending anything anywhere — but it is worth knowing before you copy something sensitive.</p>
   <p>The contents of your screenshots are never analysed, catalogued, uploaded, or retained. There is no OCR, no image recognition, and no AI. The app has no copy of your screenshots and no index of them.</p>
 
   <h2>Folder access</h2>
