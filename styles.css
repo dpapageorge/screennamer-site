@@ -150,7 +150,7 @@ h2 {
 .card h3 { margin: 0 0 6px; font-size: 16px; letter-spacing: -0.01em; }
 .card p { margin: 0; color: var(--ink-soft); font-size: 15px; }
 
-.steps { counter-reset: step; display: grid; gap: 26px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.steps { counter-reset: step; display: grid; gap: 26px; grid-template-columns: 1fr; }
 .step { position: relative; padding-top: 40px; }
 .step::before {
   counter-increment: step;
@@ -166,6 +166,31 @@ h2 {
 }
 .step h3 { margin: 0 0 4px; font-size: 16px; }
 .step p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+/* The three steps are a sequence, not a set, so the gaps carry arrows. They sit in the
+   grid gap as pseudo-elements on the first two steps, and only once three columns are
+   guaranteed: stacked on a narrow screen an arrow pointing right points at nothing. */
+@media (min-width: 860px) {
+  .steps { grid-template-columns: repeat(3, 1fr); column-gap: 56px; }
+  .step:not(:last-child)::after {
+    content: "\27F6";
+    position: absolute;
+    top: 25px;
+    right: -42px;
+    width: 28px;
+    text-align: center;
+    font-size: 22px;
+    line-height: 1;
+    color: var(--ink-soft);
+  }
+}
+
+.steps-coda {
+  margin: 34px 0 0;
+  padding-top: 26px;
+  border-top: 1px solid var(--line);
+  color: var(--ink-soft);
+}
 
 /* ---------- privacy banner ---------- */
 
