@@ -201,8 +201,18 @@ h2 {
   padding: 34px;
   text-align: center;
 }
-.banner h2 { margin-bottom: 8px; }
-.banner p { color: var(--ink-soft); max-width: 620px; margin: 0 auto 6px; }
+.banner h2 { margin: 0 0 12px; }
+/* One gap between paragraphs, a wider one before the link, and `balance` so a two-line
+   paragraph splits evenly instead of leaving one word hanging on the first line, which
+   is what made the spacing look uneven. */
+.banner p {
+  color: var(--ink-soft);
+  max-width: 620px;
+  margin: 0 auto 8px;
+  text-wrap: balance;
+}
+.banner p:last-child { margin-bottom: 0; }
+.banner .banner-link { margin-top: 20px; }
 
 /* ---------- faq ---------- */
 
