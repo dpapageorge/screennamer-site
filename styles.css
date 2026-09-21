@@ -81,7 +81,7 @@ h1 {
   margin: 0 auto 30px;
 }
 
-.cta { display: inline-flex; flex-direction: column; align-items: center; gap: 10px; }
+.cta { display: inline-flex; flex-direction: column; align-items: center; gap: 18px; }
 
 .button {
   display: inline-block;
@@ -95,6 +95,13 @@ h1 {
 .button:hover { text-decoration: none; opacity: 0.88; }
 
 .meta { font-size: 13px; color: var(--ink-faint); }
+
+/* Apple's badge, unmodified: no hover effect, no filters, no rounding of our own.
+   54px tall, so its required clear space is a quarter of that, 14px. The only
+   neighbour is the line of text below, and the .cta gap keeps it further off. */
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge:hover { text-decoration: none; }
+.store-badge img { height: 54px; width: auto; }
 
 figure.shot { margin: 52px 0 0; }
 figure.shot img,
