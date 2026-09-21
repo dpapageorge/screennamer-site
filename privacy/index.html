@@ -61,12 +61,14 @@
     <li><strong>Your preferences.</strong> Whether suggestions are switched on, whether to rename only files macOS marked as screenshots, whether the rename panel stays open and where it appears, and whether you have completed the first-run walkthrough.</li>
   </ul>
   <p>None of this is transmitted. None of it is shared. It sits in your user library like any other app's settings.</p>
+  <p>Separately, like most Mac apps, ScreenNamer writes short status messages to the macOS system log, such as when a screenshot is detected or why a file was skipped. They never contain filenames, and the folder path is marked private, so macOS hides it in any log shared from your Mac. The system log stays on your Mac and macOS clears old entries on its own.</p>
 
   <h2>Your screenshots</h2>
   <p>ScreenNamer reads image files in the folder you selected in order to do its job, and only in these ways:</p>
   <ul>
     <li>It reads a file's size, creation date and modification date to tell whether it is a new capture and whether it has finished writing.</li>
     <li>It checks whether macOS marked the file as a screenshot, which macOS does for every capture it saves. That is how it tells a capture apart from another image saved to the same folder.</li>
+    <li>When something in the folder changes, it lists the files there and their creation dates, so it can catch a new screenshot even if macOS failed to announce it. This reads names and dates only; no file is opened, and the list is not kept.</li>
     <li>It generates a small preview to show you in the rename panel, which exists only in memory while the panel is open.</li>
     <li>It reads the image's pixel dimensions to display them.</li>
     <li>It renames the file, or moves it to the Trash if you press Escape.</li>
@@ -78,13 +80,17 @@
   <h2>Folder access</h2>
   <p>ScreenNamer can only see the folder you explicitly choose through the standard macOS open panel. It does not request full disk access, and it cannot read your Documents, your Photos, or anywhere else on your Mac. If you revoke access or move the folder, the app stops watching and asks you to choose again.</p>
 
+  <h2>Copy Diagnostics</h2>
+  <p>At the bottom of the Settings window there is a <strong>Copy Diagnostics</strong> button, for when ScreenNamer isn't working. Clicking it places a short text report on the clipboard: the app and macOS versions, the folder being watched (with your account name shortened to <code>~</code>), whether that folder can be reached and how many items it holds, whether the app has seen recent activity there, and your settings. It contains no filenames and nothing from your screenshots.</p>
+  <p>The report goes nowhere unless you paste it somewhere yourself. ScreenNamer cannot send it. If you email it to us, we receive what you sent and use it only to help you.</p>
+
   <h2>Launch at login</h2>
   <p>If you turn on Launch at Login, ScreenNamer registers itself with macOS using Apple's standard mechanism. That registration lives with the operating system, not with us, and switching the setting off removes it.</p>
 
   <h2>Your choices</h2>
   <ul>
     <li><strong>Erase the saved names.</strong> Settings → History → Clear. This removes them immediately and permanently.</li>
-    <li><strong>Turn suggestions off.</strong> Settings → App → Suggest previous names. Suggestions stop appearing. In the current version, names you save are still remembered while this is off, so use Clear above to erase them.</li>
+    <li><strong>Turn suggestions off.</strong> Settings → App → Suggest previous names. Nothing further is recorded.</li>
     <li><strong>Revoke folder access.</strong> Choose a different folder, or quit the app.</li>
     <li><strong>Remove everything.</strong> Deleting ScreenNamer removes the app; deleting its container in <code>~/Library/Containers/</code> removes every setting and saved name along with it. Screenshots you have already renamed are your files and are left alone.</li>
   </ul>
