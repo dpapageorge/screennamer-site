@@ -59,6 +59,32 @@ header {
 .bar nav a { color: var(--ink-soft); }
 .bar nav a:hover { color: var(--ink); text-decoration: none; }
 
+/* Phones: the four links cannot share a row with the wordmark without wrapping
+   mid-label ("How it / works") and pushing Support off the screen. Give them a
+   row of their own, spread across the full width, each label unbreakable. */
+@media (max-width: 700px) {
+  .bar {
+    flex-wrap: wrap;
+    height: auto;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    row-gap: 9px;
+  }
+  .bar nav {
+    margin-left: 0;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
+    font-size: 13px;
+    /* A narrow phone in a large text size can still overflow: let it scroll
+       rather than wrap, and keep the scrollbar out of the design. */
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .bar nav::-webkit-scrollbar { display: none; }
+  .bar nav a { white-space: nowrap; }
+}
+
 /* ---------- hero ---------- */
 
 /* Vertical padding as longhand on purpose: `padding: 78px 0 44px` is a shorthand,
