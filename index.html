@@ -182,6 +182,8 @@
         <p>Almost always, the two folders don&rsquo;t match. ScreenNamer is watching one folder while macOS is saving to another, so nothing ever arrives for it to rename.</p>
         <p>Check them against each other. In ScreenNamer, open Settings and read the path under <em>Folder to watch</em>. Then press ⇧⌘5, click Options, and see which folder is ticked under <em>Save to</em>. Those two need to be the same folder. If the one you want isn&rsquo;t in the list, choose <em>Other Location…</em> and pick it there.</p>
         <p>Those are Step 1 and Step 2 of the Setup Guide, in the ScreenNamer menu. It ends with a test screenshot, so you can watch the two line up before you close it.</p>
+        <p><strong>Check for a folder inside the folder.</strong> ScreenNamer only watches files that land directly in the folder you chose, not in folders inside it. If macOS is saving to <em>Desktop/screenshots</em> while ScreenNamer is watching <em>Desktop</em>, nothing will ever reach it. Point ScreenNamer at the exact folder your screenshots appear in.</p>
+        <p><strong>Try turning off <em>Only rename screenshots</em>.</strong> In Settings. That switch asks macOS whether it took the picture, and the answer can go missing &mdash; most often when the folder you are watching syncs to iCloud, which does not always carry that marking across. With the switch off, ScreenNamer offers to name any new image that lands in the folder. If that fixes it for you, please <a href="#support">let me know</a>: it helps me fix the underlying problem.</p>
         <p>If ScreenNamer was working and then stopped responding, update to the latest version from the App Store, which fixes this. Until you do, restarting your Mac will get it going again.</p>
       </details>
 
@@ -189,7 +191,7 @@
         <summary>Will it rename other images I save to that folder?</summary>
         <p>No. ScreenNamer only reacts to files macOS captured itself. Export a PNG from another app into the same folder, or drag one in, and it stays exactly as you left it, under the name you gave it.</p>
         <p>macOS marks its own captures with a piece of file metadata, and that is what ScreenNamer looks for. The mark belongs to the file rather than its name, so a screenshot you renamed months ago still counts as one.</p>
-        <p>If you&rsquo;d rather be prompted for everything that lands in the folder, open Settings and turn off <em>Only rename screenshots</em>.</p>
+        <p>If you&rsquo;d rather be prompted for everything that lands in the folder, open Settings and turn off <em>Only rename screenshots</em>. That is also the setting to try if your screenshots are being ignored: the mark can go missing when a folder syncs to iCloud, and without it ScreenNamer cannot tell a capture from any other image.</p>
       </details>
 
       <details>
