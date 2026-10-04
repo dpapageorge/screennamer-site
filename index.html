@@ -75,9 +75,9 @@
       -->
       <video autoplay muted loop playsinline preload="metadata"
              poster="assets/hero-poster.jpg"
-             aria-label="A screenshot is captured over a web page. The ScreenNamer panel appears with a preview of the capture beside a name field. A few letters are typed and the rest of a name completes in grey, with matching names ranked below. One is highlighted with the arrow keys and accepted into the field, Return saves it, and the panel disappears. Along the bottom of the panel sit its four actions: Trash, Save to Clipboard, Hide, and Save.">
+             aria-label="A screenshot is captured over a web page. The ScreenNamer panel appears with a preview of the capture, a Save To row above the name field, and recent names listed below it. A name is picked from that list, then the Save To menu opens and a folder two levels down is chosen, Design Inspiration then Illustrations. The screenshot is saved there under its new name and the panel disappears. Along the bottom of the panel sit its four actions: Trash, Save to Clipboard, Hide, and Save.">
         <source src="assets/hero.mp4" type="video/mp4">
-        <img src="assets/hero-poster.jpg" alt="The ScreenNamer rename panel floating over a web page: a preview of the capture, a name field reading turbo with the rest completed in grey, a ranked list of matching names with one highlighted, and a row of actions along the bottom: Trash, Save to Clipboard, Hide and Save.">
+        <img src="assets/hero-poster.jpg" alt="The ScreenNamer rename panel floating over a web page: a preview of the capture, a Save To row reading Design Inspiration then Illustrations, a name field reading Turbo-Sugar-Snowman, and a row of actions along the bottom: Trash, Save to Clipboard, Hide and Save.">
       </video>
     </figure>
   </div>
@@ -126,6 +126,10 @@
           <p>Type a few letters and previous names appear, with the best match first. Nothing changes until you press Return.</p>
         </div>
         <div class="card">
+          <h3>Save it where it belongs</h3>
+          <p>Pick a folder as you name it &mdash; any folder inside the one ScreenNamer watches, however deep. It stays on that folder for the next screenshot, so a batch takes one trip instead of ten.</p>
+        </div>
+        <div class="card">
           <h3>Keeps up</h3>
           <p>Take as many screenshots as you need. They queue behind one panel instead of stacking windows. Name them one at a time.</p>
         </div>
@@ -134,12 +138,8 @@
           <p>Give multiple screenshots the same name and ScreenNamer numbers them automatically. File extensions stay untouched.</p>
         </div>
         <div class="card">
-          <h3>Trash, not delete</h3>
-          <p>Press Esc to move a screenshot to the Trash. It stays recoverable until you empty it.</p>
-        </div>
-        <div class="card">
-          <h3>Copy and move on</h3>
-          <p>For screenshots you only need to paste somewhere, ⇧⌘C copies the full-resolution image and moves the file to the Trash.</p>
+          <h3>Copy it, or bin it</h3>
+          <p>⇧⌘C copies the full-resolution image for pasting elsewhere. Esc gets rid of one you don&rsquo;t want. Either way the file goes to the Trash, recoverable until you empty it.</p>
         </div>
         <div class="card">
           <h3>Hide it for later</h3>
@@ -151,7 +151,7 @@
         </div>
         <div class="card">
           <h3>Only your screenshot folder</h3>
-          <p>You choose the folder. macOS remembers the permission, and ScreenNamer never asks for access to the rest of your disk.</p>
+          <p>You choose the folder. ScreenNamer works inside it, macOS remembers the permission, and it never asks for access to the rest of your disk.</p>
         </div>
       </div>
     </div>
@@ -183,6 +183,14 @@
       </details>
 
       <details>
+        <summary>Can I save screenshots into folders?</summary>
+        <p>Yes. The rename panel has a <em>Save To</em> picker above the name. Choose any folder inside the folder ScreenNamer watches &mdash; however deep it goes &mdash; and your screenshot is filed there when you save. If the folder doesn&rsquo;t exist yet, name one from the same menu. It is only created when you save, so changing your mind leaves nothing behind.</p>
+        <p>ScreenNamer stays on the folder you picked, so a run of screenshots that belong together takes one trip to the menu instead of ten. Choose your main folder again to stop filing, and it always starts there when you open the app.</p>
+        <p>The list is read from the folder itself every time the panel opens, so a folder you made in Finder a minute ago is already there &mdash; and nothing about where you file your screenshots is stored anywhere.</p>
+        <p>This is about where screenshots <em>go</em>, not where ScreenNamer looks: it still watches one folder, and only files that land directly in it. Needs ScreenNamer 1.1 or later.</p>
+      </details>
+
+      <details>
         <summary>Why does the panel sometimes take a few seconds to appear?</summary>
         <p>That is macOS, not ScreenNamer. While the floating thumbnail is showing in the corner of your screen, macOS waits about five seconds before writing the file to disk, so nothing can see it until then. Press ⇧⌘5, click Options, and turn off <em>Show Floating Thumbnail</em>, and screenshots save instantly. ScreenNamer mentions this the first time you open it.</p>
       </details>
@@ -192,7 +200,7 @@
         <p>Almost always, the two folders don&rsquo;t match. ScreenNamer is watching one folder while macOS is saving to another, so nothing ever arrives for it to rename.</p>
         <p>Check them against each other. In ScreenNamer, open Settings and read the path under <em>Folder to watch</em>. Then press ⇧⌘5, click Options, and see which folder is ticked under <em>Save to</em>. Those two need to be the same folder. If the one you want isn&rsquo;t in the list, choose <em>Other Location…</em> and pick it there.</p>
         <p>Those are Step 1 and Step 2 of the Setup Guide, in the ScreenNamer menu. It ends with a test screenshot, so you can watch the two line up before you close it.</p>
-        <p><strong>Check for a folder inside the folder.</strong> ScreenNamer only watches files that land directly in the folder you chose, not in folders inside it. If macOS is saving to <em>Desktop/screenshots</em> while ScreenNamer is watching <em>Desktop</em>, nothing will ever reach it. Point ScreenNamer at the exact folder your screenshots appear in.</p>
+        <p><strong>Check for a folder inside the folder.</strong> ScreenNamer only watches files that land directly in the folder you chose, not in folders inside it. If macOS is saving to <em>Desktop/screenshots</em> while ScreenNamer is watching <em>Desktop</em>, nothing will ever reach it. Point ScreenNamer at the exact folder your screenshots appear in. (Saving <em>into</em> a folder is a separate thing, and it does work &mdash; see <em>Can I save screenshots into folders?</em> above.)</p>
         <p><strong>Try turning off <em>Only rename screenshots</em>.</strong> In Settings. That switch asks macOS whether it took the picture, and the answer can go missing &mdash; most often when the folder you are watching syncs to iCloud, which does not always carry that marking across. With the switch off, ScreenNamer offers to name any new image that lands in the folder. If that fixes it for you, please <a href="#support">let me know</a>: it helps me fix the underlying problem.</p>
         <p>If ScreenNamer was working and then stopped responding, update to the latest version from the App Store, which fixes this. Until you do, restarting your Mac will get it going again.</p>
       </details>
